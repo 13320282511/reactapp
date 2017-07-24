@@ -10,10 +10,10 @@ module.exports = {
     entry: path.resolve(__dirname, 'app/index.js'),
     output: {
         filename: "app.js",
-        path: __dirname+"/build"
+        path: __dirname + "/build"
     },
     module: {
-        rules:[
+        rules: [
             {
                 test: /\.css$/,
                 use: [
@@ -26,13 +26,47 @@ module.exports = {
                 ]
             },
             {
-                test:/\.(js|jsx)$/,
-                use:[
+                test: /\.less$/,
+                use: [
+                    {
+                        loader: 'less-loader'
+                    },
+                    {
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'css-loader'
+                    },
+                    {
+                        loader: 'postcss-loader'
+                    }
+
+                ]
+            },
+            {
+                test: /\.(js|jsx)$/,
+                use: [
                     {
                         loader: "babel-loader",
-                        options:{
+                        options: {
                             presets: ['es2015', 'react']
                         }
+                    }
+                ]
+            },
+            {
+                test: /\.(png|gif|jpg|jpeg|bmp)$/i,
+                use: [
+                    {
+                        loader: 'url-loader?limit=5000'
+                    }
+                ]
+            },
+            {
+                test: /\.(png|woff|woff2|svg|ttf|eot)($|\?)/i,
+                use: [
+                    {
+                        loader: 'url-loader?limit=5000'
                     }
                 ]
             }

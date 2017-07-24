@@ -3,18 +3,41 @@
  */
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-import { Link } from 'react-router'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+//import HomeHeader from '../../components/HomeHeader'
+//import Category from '../../components/Category'
+import Ad from './subpage/ad'
+//import List from './subpage/List'
+
 class Home extends React.Component {
-    constructor(){
-        super();
+    constructor(props, context) {
+        super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
     render() {
         return (
             <div>
-                Home<Link to="/City">5451211</Link>
+                <div style={{height: '15px'}}>{/* 分割线 */}</div>
+                <Ad/>
             </div>
         )
     }
 }
-export default Home;
+
+// -------------------redux react 绑定--------------------
+
+function mapStateToProps(state) {
+    return {
+        userinfo: state.userinfo
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+    }
+}
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Home)
