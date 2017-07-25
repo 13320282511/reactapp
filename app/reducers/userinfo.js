@@ -12,7 +12,7 @@ export default function userinfo(state = initialState, action) {
             return action.data
 
         // 修改城市
-        case actionTypes.UPDATE_CITYNAME:
+        case actionTypes.USERINFO_UPDATE:
             return action.data
 
         default:
