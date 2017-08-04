@@ -50,9 +50,6 @@ class SearchList extends React.Component {
     componentWillUpdate() {
     }
 
-    componentDidUpdate() {
-    }
-
     // 获取首页数据
     loadFirstPageData() {
         const cityName = this.props.userinfo.cityName

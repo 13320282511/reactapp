@@ -23,6 +23,9 @@ class Search extends React.Component {
     componentWillUpdate() {
         console.log(55555)
     }
+    componentDidUpdate() {
+
+    }
     componentDidMount() {
         const params = this.props.params
         console.log('category param: ' + params.category)

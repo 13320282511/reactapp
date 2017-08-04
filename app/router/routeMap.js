@@ -24,7 +24,7 @@ class RouteMap extends React.Component {
                     <IndexRoute component={Home}/>
                     <Route path='/city' component={City}/>
                     <Route path='/User' component={User}/>
-                    <Route path='/Detail' componet={Detail}/>
+                    <Route path='/detail/:id' component={Detail}/>
                     <Route path='/search/:category(/:keyword)' component={Search} />
                 </Route>
             </Router>
