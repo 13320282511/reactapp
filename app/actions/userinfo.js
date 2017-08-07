@@ -9,3 +9,9 @@ export function update(data) {
         data
     }
 }
+export function add(data) {
+    return {
+        type:actionTypes.USERINFO_ADD,
+        data
+    }
+}

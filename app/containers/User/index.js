@@ -7,12 +7,12 @@ class User extends React.Component {
     constructor(){
         super();
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+
     }
     render() {
         return (
             <div>
-                user<br/>
-                556ggfg
+8888
             </div>
         )
     }

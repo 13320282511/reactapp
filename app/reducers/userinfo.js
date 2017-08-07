@@ -14,6 +14,8 @@ export default function userinfo(state = initialState, action) {
         // 修改城市
         case actionTypes.USERINFO_UPDATE:
             return action.data
+        case actionTypes.USERINFO_ADD:
+            return action.data
 
         default:
             return state

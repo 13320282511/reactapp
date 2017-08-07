@@ -6,7 +6,6 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import HomeHeader from '../../components/HomeHeader'
-//import Category from '../../components/Category'
 import Ad from './subpage/ad'
 import Category from '../../components/Category/index'
 import List from './subpage/List'
@@ -17,7 +16,7 @@ class Home extends React.Component {
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
     componentDidMount() {
-
+console.log(this.props.userinfo.cityName)
     }
     render() {
         return (

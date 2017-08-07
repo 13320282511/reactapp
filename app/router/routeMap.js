@@ -8,7 +8,8 @@ import Home from '../containers/Home';
 import City from '../containers/City/index.js';
 import User from '../containers/User';
 import Detail from '../containers/Detail';
-import Search from '../containers/Search'
+import Search from '../containers/Search';
+import Login from '../containers/Login';
 
 class RouteMap extends React.Component {
     constructor(props) {
@@ -23,7 +24,8 @@ class RouteMap extends React.Component {
                 <Route path='/' component={App}>
                     <IndexRoute component={Home}/>
                     <Route path='/city' component={City}/>
-                    <Route path='/User' component={User}/>
+                    <Route path='/login(/:router)' component={Login}/>
+                    <Route path='/user' component={User}/>
                     <Route path='/detail/:id' component={Detail}/>
                     <Route path='/search/:category(/:keyword)' component={Search} />
                 </Route>
