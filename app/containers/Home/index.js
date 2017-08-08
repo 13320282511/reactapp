@@ -16,7 +16,7 @@ class Home extends React.Component {
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
     componentDidMount() {
-console.log(this.props.userinfo.cityName)
+
     }
     render() {
         return (
